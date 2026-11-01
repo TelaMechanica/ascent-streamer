@@ -1,0 +1,24 @@
+Ascent Streamer UI candidate — 1.0.5-rc2-public1
+
+Based on the supplied 1.0.5-rc2 release. This is an isolated UI candidate.
+No Pi installation, receiver changes or hardware qualification performed.
+
+Changes: authentic embedded ASCENT skull/goggle mark; Control carbon/warm-paper
+palette and local font stacks; orange action accents; hard geometry; responsive
+layout; persistent local Day/Night theme; viewer version/build; scoped network,
+video and unavailable status language. All branding is available offline.
+The same configuration page is served in AP and client modes.
+Network credentials and management authentication are unchanged.
+Exact font rendering depends on fonts installed on the browser client.
+
+Validation: all 53 host tests passed; JavaScript syntax passed.
+The page/reconnect test assertion was updated for the MAX preset wording.
+Visual browser/mobile and physical Pi acceptance are pending.
+
+Install using INSTALL.md in the package. Installation changes the Pi and must be
+performed deliberately. A page-only update is sufficient on an existing rc2 Pi:
+back up /opt/ascent-viewer/web/index.html and replace it with web/index.html.
+For page-only deployment VERSION stays rc2; ui1 identity applies to a full update.
+Do not run historical recovery scripts or change automatic operation for this UI.
+Playback/network Python sources and playback-baseline.json are byte-identical
+to the input release. Original transfer archive and withdrawn releases preserved.

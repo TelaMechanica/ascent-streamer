@@ -1,0 +1,8 @@
+{
+  "transport": "udp",
+  "latency_ms": 200,
+  "rotation": "90r",
+  "max_fps": 30,
+  "watchdog_seconds": 12,
+  "scaler": "software"
+}

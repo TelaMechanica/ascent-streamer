@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+dist/
+.env
+config.json
+config.previous.json
+setup-network.uuid
+*.pcap
+*.pcapng
+*.h264
+*.log

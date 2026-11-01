@@ -1,0 +1,32 @@
+[Unit]
+Description=ASCENT FPV network controller, player and configuration
+Wants=NetworkManager.service
+After=NetworkManager.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/ascent-viewer/viewer.py
+Restart=always
+RestartSec=3
+RuntimeDirectory=ascent-viewer
+RuntimeDirectoryMode=0700
+UMask=0077
+KillMode=control-group
+TimeoutStopSec=10
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=GST_REGISTRY=/run/ascent-viewer/gstreamer-registry.bin
+Environment=XDG_CACHE_HOME=/run/ascent-viewer/cache
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/etc/ascent-viewer /run/ascent-viewer
+PrivateTmp=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6 AF_NETLINK
+
+[Install]
+WantedBy=multi-user.target
